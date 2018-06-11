@@ -1,0 +1,14 @@
+uuid: 112132a7-4b99-4b23-9bc8-04c9b78583a2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - lastivka1313@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''
