@@ -1,0 +1,20 @@
+uuid: 16ef1da7-50a3-4b74-af3c-1e06207251a9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - cactus
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: cactus_local_actions
+theme: cactus
+region: content
+weight: -1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

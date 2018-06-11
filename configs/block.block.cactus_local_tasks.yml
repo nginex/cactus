@@ -1,0 +1,22 @@
+uuid: 86db82da-3a25-4265-8e72-195f8b660e6d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - cactus
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: cactus_local_tasks
+theme: cactus
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 5e9acb20-175e-4abf-8273-9b02c9abdd3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cactus
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: cactus_breadcrumbs
+theme: cactus
+region: content
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

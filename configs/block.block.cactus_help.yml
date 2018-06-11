@@ -1,0 +1,22 @@
+uuid: f4ff0b2b-ca6e-48c2-a52c-6ef31cc30aa2
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - cactus
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: cactus_help
+theme: cactus
+region: content
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

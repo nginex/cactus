@@ -1,0 +1,20 @@
+uuid: 7586485f-bb7f-45dc-93e5-e890fa7c5020
+langcode: en
+status: true
+dependencies:
+  theme:
+    - cactus
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: cactus_page_title
+theme: cactus
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

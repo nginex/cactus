@@ -13,6 +13,7 @@
 
 # Core's dependencies are managed with Composer.
 vendor
+node_modules
 
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php

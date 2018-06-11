@@ -1,0 +1,17 @@
+{
+  "name": "Cactus",
+  "version": "1.0.0",
+  "description": "Use gulp to compile sass",
+  "dependencies": {
+    "gulp-sass": "^4.0.1",
+    "npm": "^6.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "author": "",
+  "license": "ISC"
+}

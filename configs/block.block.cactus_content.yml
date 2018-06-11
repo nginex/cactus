@@ -1,0 +1,22 @@
+uuid: 501f7e7b-80bd-417e-888e-69c54f5ba14e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cactus
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: cactus_content
+theme: cactus
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
