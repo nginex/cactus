@@ -1,6 +1,7 @@
 framework:
   css:
     theme:
+      https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans&amp;subset=cyrillic: { type: external, minified: true }
       css/style.css: {}
   js:
     bootstrap/assets/javascripts/bootstrap/affix.js: {}

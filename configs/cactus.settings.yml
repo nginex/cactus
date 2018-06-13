@@ -25,4 +25,5 @@ region_wells:
   content: ''
   footer: ''
   second_footer: ''
-navbar_position: static-top
+navbar_position: fixed-top
+breadcrumb_home: 1

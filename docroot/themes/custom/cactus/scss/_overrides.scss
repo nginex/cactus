@@ -8,12 +8,15 @@
 @import "component/form";
 @import "component/icon";
 @import "component/navbar";
+@import "component/footer";
 @import "component/node";
 @import "component/panel";
 @import "component/progress-bar";
 @import "component/table-drag";
 @import "component/tabs";
 @import "component/toolbar";
+@import "component/top_bar";
+@import "component/content";
 
 // jQuery UI style overrides.
 @import "jquery-ui/autocomplete";
@@ -35,7 +38,7 @@ ol, ul {
   margin-top: 45px;
   padding-top: 35px;
   padding-bottom: 36px;
-  border-top: 1px solid #E5E5E5;
+  border-top: none;
 }
 
 // Paragraphs.
@@ -66,4 +69,35 @@ p:last-child,
   &:first-child {
     margin-top: 0;
   }
+}
+
+html {
+  font-size: $font-size-base - 4;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+
+  @media screen and (min-width: $screen-sm-min) {
+    font-size: $font-size-base - 2;
+  }
+
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: $font-size-base;
+  }
+}
+
+body {
+  font-size: 1rem;
+  font-weight: $font-weight-base;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body.navbar-is-fixed-top {
+  margin-top: 150px;
 }

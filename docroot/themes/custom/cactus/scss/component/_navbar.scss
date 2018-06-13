@@ -44,26 +44,63 @@ body {
     }
   }
 }
-.navbar.container {
-  @media #{$tablet} {
-    max-width: (($container-sm - $grid-gutter-width));
-  }
-  @media #{$normal} {
-    max-width: (($container-md - $grid-gutter-width));
-  }
-  @media #{$wide} {
-    max-width: (($container-lg - $grid-gutter-width));
-  }
-}
 
 // Branding.
-.navbar .logo {
-  margin-right: -($grid-gutter-width / 2);
-  padding-left: ($grid-gutter-width / 2);
-  padding-right: ($grid-gutter-width / 2);
-  @media #{$grid-breakpoint} {
-    margin-right: 0;
-    padding-left: 0;
+.navbar
+
+
+.navbar-header {
+  @media (min-width: $grid-float-breakpoint) {
+    float: none;
+  }
+
+  .region-header {
+    @extend .align-items-center;
+    .logo-wrapper {
+      @extend .pull-left;
+
+      .logo {
+        @extend .col-auto;
+        display: block;
+        padding: 0;
+        margin: 0;
+        img {
+          height: 80px;
+          display: block;
+          margin: 19px auto 0;
+        }
+      }
+
+      .navbar-brand {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 1rem;
+        float: none;
+        display: block;
+        padding-top: 5px;
+        @extend .col-auto;
+      }
+    }
+
+    > nav {
+      @extend .pull-right;
+
+      .navbar-nav {
+        > li {
+          &:hover {
+            > .dropdown-menu {
+              display: block;
+            }
+          }
+          > a {
+            text-transform: uppercase;
+            font-weight: bold;
+
+          }
+        }
+      }
+    }
   }
 }
 
