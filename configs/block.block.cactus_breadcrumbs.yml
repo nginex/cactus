@@ -10,8 +10,8 @@ _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: cactus_breadcrumbs
 theme: cactus
-region: content
-weight: -5
+region: top_bar
+weight: -3
 provider: null
 plugin: system_breadcrumb_block
 settings:

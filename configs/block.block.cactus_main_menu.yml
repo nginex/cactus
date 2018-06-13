@@ -12,8 +12,8 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: cactus_main_menu
 theme: cactus
-region: navigation
-weight: -6
+region: header
+weight: -3
 provider: null
 plugin: 'system_menu_block:main'
 settings:

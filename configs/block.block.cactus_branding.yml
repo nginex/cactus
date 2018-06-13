@@ -11,7 +11,7 @@ _core:
 id: cactus_branding
 theme: cactus
 region: header
-weight: 0
+weight: -4
 provider: null
 plugin: system_branding_block
 settings:

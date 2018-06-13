@@ -17,3 +17,12 @@ logo:
   use_default: 0
 table_responsive: '-1'
 table: ''
+region_wells:
+  header: ''
+  carousel: ''
+  top_bar: ''
+  highlighted: ''
+  content: ''
+  footer: ''
+  second_footer: ''
+navbar_position: static-top
