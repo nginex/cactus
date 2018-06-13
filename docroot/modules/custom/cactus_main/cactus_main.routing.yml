@@ -1,0 +1,7 @@
+cactus_main.front_page:
+  path: '/front'
+  defaults:
+    _controller: '\Drupal\cactus_main\Controller\FrontController::index'
+    _title: 'Home'
+  requirements:
+    _access: 'TRUE'

@@ -1,0 +1,5 @@
+name: Cactus Main
+description: Provides general functionality for Cactus.
+package: Cactus
+type: module
+core: 8.x
