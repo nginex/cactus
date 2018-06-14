@@ -1,0 +1,33 @@
+uuid: e2553122-f141-4bf5-ae99-661a8aee6fe2
+langcode: uk
+status: true
+dependencies:
+  config:
+    - views.view.article_teasers
+  module:
+    - node
+    - views
+  theme:
+    - cactus
+id: views_block__article_teasers_user_articles
+theme: cactus
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:article_teasers-user_articles'
+settings:
+  id: 'views_block:article_teasers-user_articles'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      author: author
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

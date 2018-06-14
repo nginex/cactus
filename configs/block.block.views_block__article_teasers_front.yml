@@ -12,7 +12,7 @@ dependencies:
 id: views_block__article_teasers_front
 theme: cactus
 region: content
-weight: -3
+weight: -5
 provider: null
 plugin: 'views_block:article_teasers-front'
 settings:
