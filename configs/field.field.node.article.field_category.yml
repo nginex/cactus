@@ -1,0 +1,21 @@
+uuid: 250d04a0-4ce2-41a7-9fbd-b28b8458f14b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.article
+  module:
+    - options
+id: node.article.field_category
+field_name: field_category
+entity_type: node
+bundle: article
+label: Category
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,5 +1,5 @@
 uuid: 8fe99084-264d-4ea8-b05b-7be934943804
-langcode: en
+langcode: uk
 status: true
 dependencies:
   config:
@@ -15,7 +15,7 @@ entity_type: node
 bundle: article
 label: Body
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

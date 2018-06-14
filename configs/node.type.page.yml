@@ -1,7 +1,13 @@
 uuid: 482ec634-7276-46c1-9937-a3284e25e56f
-langcode: en
+langcode: uk
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 _core:
   default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
 name: 'Basic page'

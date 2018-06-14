@@ -1,0 +1,14 @@
+uuid: b6a7dafb-c4ea-4e7b-9b34-0fbc5c026baf
+langcode: uk
+status: true
+dependencies: {  }
+name: 368x552sc
+label: 368x552sc
+effects:
+  b1992d30-c320-4c17-a928-f1a40592ab9c:
+    uuid: b1992d30-c320-4c17-a928-f1a40592ab9c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 368
+      height: 552

@@ -1,0 +1,60 @@
+uuid: 8766e7ae-235a-49cf-b9a0-c5c6a1eedb1b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.node.author.field_email
+    - field.field.node.author.field_photo
+    - image.style.thumbnail
+    - node.type.author
+  module:
+    - image
+    - path
+id: node.author.default
+targetEntityType: node
+bundle: author
+mode: default
+content:
+  field_email:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_photo:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  promote: true
+  sticky: true
+  uid: true

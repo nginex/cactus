@@ -1,5 +1,5 @@
 uuid: ba0c5ffd-b16e-4cce-b1c0-568c0b61e73b
-langcode: en
+langcode: uk
 status: true
 dependencies:
   config:
@@ -26,4 +26,5 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  langcode: true
   member_for: true

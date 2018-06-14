@@ -1,5 +1,5 @@
 uuid: ff2e4715-dea0-4a56-b396-238fa927fb70
-langcode: en
+langcode: uk
 status: true
 dependencies:
   module:
@@ -194,7 +194,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Subject
+          label: Тема
           exclude: false
           alter:
             alter_text: false
@@ -681,7 +681,7 @@ display:
           exposed: true
           expose:
             operator_id: subject_op
-            label: Subject
+            label: Тема
             description: ''
             use_operator: false
             operator: subject_op
@@ -954,7 +954,7 @@ display:
           exposed: true
           expose:
             operator_id: subject_op
-            label: Subject
+            label: Тема
             description: ''
             use_operator: false
             operator: subject_op
@@ -1131,7 +1131,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Subject
+          label: Тема
           exclude: false
           alter:
             alter_text: false

@@ -1,5 +1,5 @@
 uuid: a4409114-cb8f-431a-9270-7b5f0f5090ce
-langcode: en
+langcode: uk
 status: true
 dependencies:
   config:
@@ -27,4 +27,5 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
-hidden: {  }
+hidden:
+  langcode: true

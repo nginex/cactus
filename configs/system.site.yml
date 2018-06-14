@@ -1,14 +1,14 @@
 uuid: 6e54a8d0-093a-4739-a6d5-f7d040300991
-name: Cactus
+name: Кактус
 mail: lastivka1313@gmail.com
-slogan: 'Magazine for women'
+slogan: 'Журнал для жінок'
 page:
   403: ''
   404: ''
   front: /front
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
-default_langcode: en
+langcode: uk
+default_langcode: uk
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

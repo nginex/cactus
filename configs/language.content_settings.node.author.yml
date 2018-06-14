@@ -1,0 +1,11 @@
+uuid: cebb693a-fea2-47b2-aad5-ffb18da95b10
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.author
+id: node.author
+target_entity_type_id: node
+target_bundle: author
+default_langcode: site_default
+language_alterable: false

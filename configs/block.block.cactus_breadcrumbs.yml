@@ -11,7 +11,7 @@ _core:
 id: cactus_breadcrumbs
 theme: cactus
 region: top_bar
-weight: -3
+weight: -5
 provider: null
 plugin: system_breadcrumb_block
 settings:

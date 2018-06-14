@@ -1,0 +1,17 @@
+uuid: 91ec3479-c396-491c-ac05-2ab0e16bb6b5
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Author
+type: author
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

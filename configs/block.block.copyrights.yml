@@ -1,0 +1,25 @@
+uuid: f5097d01-a247-48fd-a2c8-1bfd347659d3
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9f3b1cda-772c-467b-9174-ee01684ec6b3'
+  module:
+    - block_content
+  theme:
+    - cactus
+id: copyrights
+theme: cactus
+region: footer_pre_bottom
+weight: 0
+provider: null
+plugin: 'block_content:9f3b1cda-772c-467b-9174-ee01684ec6b3'
+settings:
+  id: 'block_content:9f3b1cda-772c-467b-9174-ee01684ec6b3'
+  label: 'Всі права захищені'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

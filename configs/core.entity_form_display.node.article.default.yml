@@ -1,16 +1,16 @@
 uuid: f1669c38-d29c-49f5-8c4d-ff592790d304
-langcode: en
+langcode: uk
 status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.comment
+    - field.field.node.article.field_authors
+    - field.field.node.article.field_category
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.thumbnail
+    - image.style.medium
     - node.type.article
   module:
-    - comment
     - image
     - path
     - text
@@ -30,25 +30,34 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_authors:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: 'Start entering name of the author'
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_category:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_image:
     type: image_image
     weight: 4
     region: content
     settings:
+      preview_image_style: medium
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
@@ -61,7 +70,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -69,21 +78,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 7
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
-    region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 16
+    weight: 9
     region: content
     third_party_settings: {  }
   title:
@@ -94,13 +96,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 5
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true
+  sticky: true
+  uid: true

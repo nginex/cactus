@@ -1,0 +1,20 @@
+uuid: c5f35d26-ad96-459c-b394-450ebd6fe38f
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.node.author.field_email
+    - field.field.node.author.field_photo
+    - node.type.author
+  module:
+    - user
+id: node.author.default
+targetEntityType: node
+bundle: author
+mode: default
+content: {  }
+hidden:
+  field_email: true
+  field_photo: true
+  langcode: true
+  links: true

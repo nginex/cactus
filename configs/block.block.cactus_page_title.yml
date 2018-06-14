@@ -2,6 +2,8 @@ uuid: 7586485f-bb7f-45dc-93e5-e890fa7c5020
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - cactus
 _core:
@@ -9,7 +11,7 @@ _core:
 id: cactus_page_title
 theme: cactus
 region: top_bar
-weight: -4
+weight: -6
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,30 @@
+uuid: 11670499-4af1-4ea7-b3f6-8c80b0a8c215
+langcode: uk
+status: true
+dependencies:
+  config:
+    - views.view.article_teasers
+  module:
+    - system
+    - views
+  theme:
+    - cactus
+id: views_block__article_teasers_front
+theme: cactus
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:article_teasers-front'
+settings:
+  id: 'views_block:article_teasers-front'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,28 @@
+uuid: f0fcec42-7462-409d-a489-fcfe3d15a730
+langcode: uk
+status: true
+dependencies:
+  module:
+    - cactus_main
+    - node
+  theme:
+    - cactus
+id: articleauthoranddate
+theme: cactus
+region: top_bar
+weight: -4
+provider: null
+plugin: article_author_and_date
+settings:
+  id: article_author_and_date
+  label: 'Article: author and date'
+  provider: cactus_main
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

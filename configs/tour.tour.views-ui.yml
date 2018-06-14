@@ -1,5 +1,5 @@
 uuid: bee4eaeb-f817-4f0f-8bf6-6a8978cbaa73
-langcode: en
+langcode: uk
 status: true
 dependencies:
   module:
@@ -89,7 +89,7 @@ tips:
   views-ui-preview:
     id: views-ui-preview
     plugin: text
-    label: Preview
+    label: 'Попередній перегляд'
     body: 'Show a preview of the view output.'
     weight: 10
     location: left

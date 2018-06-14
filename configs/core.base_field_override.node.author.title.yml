@@ -1,0 +1,18 @@
+uuid: a2221f7a-be4b-4621-afe4-b52db68e9ec0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.author
+id: node.author.title
+field_name: title
+entity_type: node
+bundle: author
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

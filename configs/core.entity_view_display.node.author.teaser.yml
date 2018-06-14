@@ -1,0 +1,23 @@
+uuid: e2e52aa0-7415-4f5e-9f62-db715456134a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.author.field_email
+    - field.field.node.author.field_photo
+    - node.type.author
+  module:
+    - user
+id: node.author.teaser
+targetEntityType: node
+bundle: author
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_email: true
+  field_photo: true
+  langcode: true

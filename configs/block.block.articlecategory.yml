@@ -1,0 +1,28 @@
+uuid: 5f932548-c150-41d6-bd22-75522f2918cb
+langcode: uk
+status: true
+dependencies:
+  module:
+    - cactus_main
+    - node
+  theme:
+    - cactus
+id: articlecategory
+theme: cactus
+region: top_bar
+weight: -8
+provider: null
+plugin: article_category
+settings:
+  id: article_category
+  label: 'Article: category'
+  provider: cactus_main
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

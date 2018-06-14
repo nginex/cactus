@@ -1,0 +1,24 @@
+uuid: e0ca8f24-40c3-48ce-ba0a-68266f550223
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - cactus
+id: footer
+theme: cactus
+region: footer_middle
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

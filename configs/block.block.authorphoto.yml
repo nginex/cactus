@@ -1,0 +1,28 @@
+uuid: b4478e50-ec34-4751-95d4-67991db29215
+langcode: uk
+status: true
+dependencies:
+  module:
+    - cactus_main
+    - node
+  theme:
+    - cactus
+id: authorphoto
+theme: cactus
+region: top_bar
+weight: -7
+provider: null
+plugin: author_photo
+settings:
+  id: author_photo
+  label: 'Author: photo'
+  provider: cactus_main
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      author: author
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

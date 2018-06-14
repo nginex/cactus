@@ -1,0 +1,51 @@
+uuid: 06955989-2547-4989-80c4-bb5b6f618a38
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_category
+field_name: field_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: interview
+      label: 'Інтерв''ю'
+    -
+      value: all_our
+      label: 'Всі свої'
+    -
+      value: sport
+      label: Спорт
+    -
+      value: relationships
+      label: Стосунки
+    -
+      value: sex
+      label: Секс
+    -
+      value: fact
+      label: Факт
+    -
+      value: grants
+      label: Гранти
+    -
+      value: contests
+      label: Конкурси
+    -
+      value: courses
+      label: Курси
+    -
+      value: blog
+      label: 'Блог Психолога'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

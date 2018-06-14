@@ -1,0 +1,14 @@
+uuid: 43137bb9-a63d-453d-93b4-3a7cdea95677
+langcode: uk
+status: true
+dependencies: {  }
+name: 200x200sc
+label: 200x200sc
+effects:
+  13a8622b-e277-4cf4-9acc-f7dc54574ac7:
+    uuid: 13a8622b-e277-4cf4-9acc-f7dc54574ac7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200
