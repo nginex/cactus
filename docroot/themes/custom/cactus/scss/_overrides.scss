@@ -17,6 +17,8 @@
 @import "component/toolbar";
 @import "component/top_bar";
 @import "component/content";
+@import "component/breadcrumb";
+@import "component/teasers";
 
 // jQuery UI style overrides.
 @import "jquery-ui/autocomplete";
@@ -99,5 +101,9 @@ img {
 }
 
 body.navbar-is-fixed-top {
-  margin-top: 150px;
+  margin-top: 110px;
+}
+
+.alert {
+  margin: 2rem 0 1rem;
 }

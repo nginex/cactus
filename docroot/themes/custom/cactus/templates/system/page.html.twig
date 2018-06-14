@@ -82,7 +82,7 @@
 {% block main %}
   <div role="main" class="main-container js-quickedit-main-content">
     {# Carousel #}
-    {% if page.carousel %}
+    {% if page.carousel|render|length %}
       {% block carousel %}
         <section class="section-carousel">
           <div class="{{ container }}">
@@ -93,9 +93,9 @@
     {% endif %}
 
     {# Top bar #}
-    {% if page.top_bar %}
+    {% if page.top_bar|render|length %}
       {% block top_bar %}
-        <section class="section-top-bar">
+        <section{{ top_bar_attributes.addClass('section-top-bar') }}>
           <div class="{{ container }}">
             {{ page.top_bar }}
           </div>
@@ -134,11 +134,32 @@
   {% endblock %}
 {% endif %}
 
-{% if page.second_footer %}
-  {% block second_footer %}
-    <section class="section-second-footer">
+{% if page.footer_middle %}
+  {% block footer_middle %}
+    <section class="section-footer-middle">
       <div class="{{ container }}">
-        {{ page.second_footer }}
+        {{ page.footer_middle }}
+      </div>
+    </section>
+  {% endblock %}
+{% endif %}
+
+
+{% if page.footer_pre_bottom %}
+  {% block footer_pre_bottom %}
+    <section class="section-footer-pre-bottom">
+      <div class="{{ container }}">
+        {{ page.footer_pre_bottom }}
+      </div>
+    </section>
+  {% endblock %}
+{% endif %}
+
+{% if page.footer_bottom %}
+  {% block footer_bottom %}
+    <section class="section-footer-bottom">
+      <div class="{{ container }}">
+        {{ page.footer_bottom }}
       </div>
     </section>
   {% endblock %}

@@ -46,9 +46,6 @@ body {
 }
 
 // Branding.
-.navbar
-
-
 .navbar-header {
   @media (min-width: $grid-float-breakpoint) {
     float: none;
@@ -56,30 +53,17 @@ body {
 
   .region-header {
     @extend .align-items-center;
-    .logo-wrapper {
+
+    .logo {
       @extend .pull-left;
 
-      .logo {
-        @extend .col-auto;
+      display: block;
+      padding: 0;
+      margin: 0;
+      img {
+        height: 80px;
         display: block;
-        padding: 0;
-        margin: 0;
-        img {
-          height: 80px;
-          display: block;
-          margin: 19px auto 0;
-        }
-      }
-
-      .navbar-brand {
-        text-align: center;
-        text-transform: uppercase;
-        margin: 0;
-        font-size: 1rem;
-        float: none;
-        display: block;
-        padding-top: 5px;
-        @extend .col-auto;
+        margin: 15px 0;
       }
     }
 
@@ -96,7 +80,6 @@ body {
           > a {
             text-transform: uppercase;
             font-weight: bold;
-
           }
         }
       }

@@ -1,0 +1,95 @@
+.article-teaser {
+  padding: 0 15px 1.6rem;
+
+  article {
+    border: 1px solid #eeeeee;
+
+    .content-wrapper {
+      padding: 1.667rem;
+      .title {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-transform: uppercase;
+        a {
+          color: #000;
+          font-family: $headings-font-family;
+          font-weight: bold;
+          &:hover {
+            text-decoration: none;
+            color: rgba(0, 0, 0, .7);
+          }
+        }
+      }
+      .date-and-author {
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: .5rem 0 .8rem;
+        color: #263238;
+        a {
+          color: rgba(38,50,56,0.6);
+          text-decoration: underline;
+        }
+      }
+      .body {
+        color: rgba(38,50,56,0.6);
+        font-size: 0.889rem;
+        line-height: 1.5;
+      }
+      .read-more {
+        margin-top: 1.2rem;
+        text-transform: uppercase;
+        a {
+          color: #000;
+          font-size: 11px;
+          font-family: $headings-font-family;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .media-wrapper {
+      position: relative;
+      .category {
+        position: absolute;
+        bottom: 0;
+        left: 1rem;
+        padding: 0 10px;
+        color: #fff;
+        font-size: 0.80rem;
+        font-weight: bold;
+        background: rgba(0,0,0,.6);
+        &.interview {
+          background: $color-interview;
+        }
+        &.sport {
+          background: $color-sport;
+        }
+        &.sex {
+          background: $color-sex;
+        }
+        &.fact {
+          background: $color-fact;
+        }
+        &.relationships {
+          background: $color-relationships;
+        }
+        &.all_our {
+          background: $color-all-our;
+        }
+        &.grants {
+          background: $color-grants;
+        }
+        &.contests {
+          background: $color-contests;
+        }
+        &.courses {
+          background: $color-courses;
+        }
+        &.blog {
+          background: $color-blog;
+        }
+      }
+    }
+  }
+}

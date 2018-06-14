@@ -1,8 +1,115 @@
 <?php
 
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Template\Attribute;
+use Drupal\file\Entity\File;
+use Drupal\node\Entity\Node;
+
 /**
  * @file
  * Bootstrap sub-theme.
  *
  * Place your custom PHP code in this file.
  */
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function cactus_preprocess_node(&$vars) {
+  /** @var \Drupal\node\Entity\Node $node */
+  $node = $vars['node'];
+
+  if ($node->getType() == 'article' && $vars['view_mode'] == 'teaser') {
+    $nid = $node->id();
+
+    /** @var \Drupal\views\ViewExecutable $view */
+    $view = $vars['view'];
+
+    // Get current index in the related view.
+    $index = 0;
+    foreach ($view->result as $row) {
+      if ($row->nid == $nid) {
+        $index = $row->index + 1;
+        break;
+      }
+    }
+
+    $file = File::load($node->get('field_image')->target_id);
+    $vars['image'] = [
+      '#theme' => 'image_style',
+      '#style_name' => $index % 2 ? '368x246sc' : '368x552sc',
+      '#uri' => $file->getFileUri(),
+    ];
+
+    $vars['category_key'] = $node->get('field_category')->value;
+    $vars['title'] = $node->getTitle();
+    $vars['date'] = date('F d, Y', $node->getCreatedTime());
+
+    $authors_nids = $node->get('field_authors')->getValue();
+    $authors_nids = array_column($authors_nids, 'target_id');
+
+    /** @var \Drupal\node\Entity\Node[] $authors */
+    $authors = Node::loadMultiple($authors_nids);
+    $authors_names = [];
+    foreach ($authors as $author) {
+      $authors_names[] = $author->toLink()->toString();
+    }
+
+    $vars['read_more_link'] = $node->toLink(t('Read more'))->toRenderable();
+    $vars['author_links'] = [
+      '#markup' => Markup::create(implode(', ', $authors_names)),
+    ];
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function cactus_preprocess_block(&$vars) {
+  switch ($vars['base_plugin_id']) {
+    case 'system_branding_block':
+      if ($vars['site_name'] && $vars['site_logo']) {
+        $vars['site_logo'] = '/' . drupal_get_path('theme', 'cactus') . '/images/logo_with_name_black.png';
+        $vars['site_name'] = '';
+      }
+      else {
+        $vars['site_logo'] = '/' . drupal_get_path('theme', 'cactus') . '/images/logo_with_name_white.png';
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function cactus_preprocess_page(&$vars) {
+  $top_bar_attributes = new Attribute();
+
+  if (!empty($vars['node'])) {
+    /** @var \Drupal\node\Entity\Node $node */
+    $node = $vars['node'];
+
+    switch ($node->getType()) {
+      case 'article':
+        // Don't use breadcrumbs.
+        unset($vars['page']['top_bar']['cactus_breadcrumbs']);
+
+        // Add background image.
+        $image = File::load($node->get('field_image')->target_id);
+
+        $url = file_create_url($image->getFileUri());
+        $top_bar_attributes->addClass('article__full-image');
+        $top_bar_attributes->setAttribute('style', "background-image: url({$url});");
+        break;
+
+      case 'author':
+        // Don't use breadcrumbs.
+        unset($vars['page']['top_bar']['cactus_breadcrumbs']);
+
+        $top_bar_attributes->addClass('author-node-bar');
+        break;
+    }
+  }
+
+  $vars['top_bar_attributes'] = $top_bar_attributes;
+}

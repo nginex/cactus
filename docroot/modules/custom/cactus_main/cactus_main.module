@@ -4,3 +4,15 @@
  * @file
  * Define hooks for cactus_main module.
  */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function cactus_main_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->bundle() == 'article' && $view_mode == 'teaser') {
+    $build['#attached']['library'][] = 'cactus/masonry';
+  }
+}
