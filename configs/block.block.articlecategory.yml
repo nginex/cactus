@@ -10,7 +10,7 @@ dependencies:
 id: articlecategory
 theme: cactus
 region: top_bar
-weight: -8
+weight: -9
 provider: null
 plugin: article_category
 settings:

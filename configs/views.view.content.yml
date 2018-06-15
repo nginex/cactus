@@ -161,7 +161,7 @@ display:
           id: title
           table: node_field_data
           field: title
-          label: Title
+          label: Заголовок
           exclude: false
           alter:
             alter_text: false
@@ -184,7 +184,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Content type'
+          label: 'Тип матеріалів'
           exclude: false
           alter:
             alter_text: false
@@ -247,7 +247,7 @@ display:
           table: users_field_data
           field: name
           relationship: uid
-          label: Author
+          label: Автор
           exclude: false
           alter:
             alter_text: false
@@ -312,7 +312,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operations
+          label: Операції
           exclude: false
           alter:
             alter_text: false
@@ -369,7 +369,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Заголовок
             description: ''
             use_operator: false
             operator: title_op
@@ -409,7 +409,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: 'Content type'
+            label: 'Тип матеріалів'
             description: ''
             use_operator: false
             operator: type_op
@@ -496,7 +496,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Language
+            label: Мова
             description: ''
             use_operator: false
             operator: langcode_op

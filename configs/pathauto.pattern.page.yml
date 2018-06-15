@@ -1,0 +1,33 @@
+uuid: 2233a462-2112-4315-af37-1be4811117f0
+langcode: uk
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: page
+label: Page
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  c71a4964-4019-4049-9a27-005b5e467f9f:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: c71a4964-4019-4049-9a27-005b5e467f9f
+  24d80189-b422-4e23-b775-54ffc4f4e393:
+    id: language
+    langcodes:
+      uk: uk
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 24d80189-b422-4e23-b775-54ffc4f4e393
+selection_logic: and
+weight: -5
+relationships:
+  'node:langcode:language':
+    label: Language

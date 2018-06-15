@@ -1,9 +1,15 @@
 .article-teaser {
   padding: 0 15px 1.6rem;
-
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+    text-align: center;
+  }
   article {
     border: 1px solid #eeeeee;
-
+    @media (max-width: $screen-xs-max) {
+      display: inline-block;
+      text-align: left;
+    }
     .content-wrapper {
       padding: 1.667rem;
       .title {

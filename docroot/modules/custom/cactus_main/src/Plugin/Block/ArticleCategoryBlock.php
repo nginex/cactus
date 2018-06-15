@@ -37,7 +37,7 @@ class ArticleCategoryBlock extends BlockBase {
         'contexts' => ['route'],
         'tags' => ['node:' . $node->id()],
       ],
-      '#markup' => Markup::create('<a href="/' . $category . '">' . $values[$category] . '</a>'),
+      '#markup' => Markup::create('<a href="/' . str_replace('_', '-', $category) . '">' . $values[$category] . '</a>'),
       '#attributes' => [
         'class' => ['article__category', $category],
       ],

@@ -1,0 +1,25 @@
+uuid: 6bacb824-06ab-4ed0-809c-35a2dc8e49a6
+langcode: uk
+status: true
+dependencies:
+  module:
+    - language
+    - user
+id: users
+label: Users
+type: 'canonical_entities:user'
+pattern: '/users/[user:account-name]'
+selection_criteria:
+  8f51fb4a-2750-4eea-a7d0-3fba28a10f95:
+    id: language
+    langcodes:
+      uk: uk
+    negate: false
+    context_mapping:
+      language: 'user:langcode:language'
+    uuid: 8f51fb4a-2750-4eea-a7d0-3fba28a10f95
+selection_logic: and
+weight: 0
+relationships:
+  'user:langcode:language':
+    label: Language

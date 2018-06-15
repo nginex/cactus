@@ -1,0 +1,28 @@
+uuid: f4e86210-015a-4fa4-aa8f-3264431d14a7
+langcode: uk
+status: true
+dependencies:
+  module:
+    - cactus_main
+    - node
+  theme:
+    - cactus
+id: authorsocial
+theme: cactus
+region: top_bar
+weight: -6
+provider: null
+plugin: author_social
+settings:
+  id: author_social
+  label: 'Author: social'
+  provider: cactus_main
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      author: author
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

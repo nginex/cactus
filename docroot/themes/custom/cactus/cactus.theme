@@ -103,8 +103,18 @@ function cactus_preprocess_page(&$vars) {
         break;
 
       case 'author':
+        $vars['page']['top_bar']['author_title_wrapper'] = [
+          '#type' => 'container',
+          '#attributes' => ['class' => ['author__title-wrapper']],
+          '#weight' => $vars['page']['top_bar']['cactus_page_title']['#weight'],
+          'title' => $vars['page']['top_bar']['cactus_page_title'],
+          'social' => $vars['page']['top_bar']['authorsocial'],
+        ];
+
         // Don't use breadcrumbs.
         unset($vars['page']['top_bar']['cactus_breadcrumbs']);
+        unset($vars['page']['top_bar']['cactus_page_title']);
+        unset($vars['page']['top_bar']['authorsocial']);
 
         $top_bar_attributes->addClass('author-node-bar');
         break;

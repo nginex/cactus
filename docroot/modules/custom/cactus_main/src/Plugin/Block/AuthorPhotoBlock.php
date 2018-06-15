@@ -3,8 +3,6 @@
 namespace Drupal\cactus_main\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Render\Markup;
-use Drupal\field\Entity\FieldConfig;
 use Drupal\file\Entity\File;
 
 /**

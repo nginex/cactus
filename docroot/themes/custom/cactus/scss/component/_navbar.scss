@@ -54,12 +54,17 @@ body {
   .region-header {
     @extend .align-items-center;
 
+    justify-content: center;
+    @media (min-width: $screen-md-min) {
+      justify-content: space-between;
+    }
     .logo {
-      @extend .pull-left;
-
       display: block;
       padding: 0;
       margin: 0;
+      @media (min-width: $screen-md-min) {
+        float: left;
+      }
       img {
         height: 80px;
         display: block;
@@ -68,8 +73,11 @@ body {
     }
 
     > nav {
-      @extend .pull-right;
-
+      display: none;
+      @media (min-width: $screen-sm-min) {
+        display: block;
+        float: right;
+      }
       .navbar-nav {
         > li {
           &:hover {
@@ -86,4 +94,3 @@ body {
     }
   }
 }
-
