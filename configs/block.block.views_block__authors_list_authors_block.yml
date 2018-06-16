@@ -1,0 +1,32 @@
+uuid: 277120fa-10bc-432d-8dfe-84723636675d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - views.view.authors_list
+  module:
+    - node
+    - views
+  theme:
+    - cactus
+id: views_block__authors_list_authors_block
+theme: cactus
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:authors_list-authors_block'
+settings:
+  id: 'views_block:authors_list-authors_block'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

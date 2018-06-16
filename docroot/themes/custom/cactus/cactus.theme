@@ -1,7 +1,9 @@
 <?php
 
+use Drupal\Core\Link;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\Template\Attribute;
+use Drupal\Core\Url;
 use Drupal\file\Entity\File;
 use Drupal\node\Entity\Node;
 
@@ -18,6 +20,32 @@ use Drupal\node\Entity\Node;
 function cactus_preprocess_node(&$vars) {
   /** @var \Drupal\node\Entity\Node $node */
   $node = $vars['node'];
+
+  if ($node->getType() == 'author' && $vars['view_mode'] == 'teaser') {
+    $vars['read_mode_link'] = Link::createFromRoute(t("Read author's articles"), 'entity.node.canonical', [
+      'node' => $node->id(),
+    ])->toRenderable();
+
+    $items = [];
+
+    if ($email = $node->get('field_email')->value) {
+      $url = Url::fromUri('mailto:' . $email, [
+        'attributes' => [
+          'class' => [
+            'social-item',
+            'email',
+          ],
+          'title' => t('Send email to the author'),
+        ],
+      ]);
+      $items[] = Link::fromTextAndUrl(t('Email'), $url)->toString();
+    }
+
+    $vars['social'] = [
+      '#theme' => 'item_list',
+      '#items' => $items,
+    ];
+  }
 
   if ($node->getType() == 'article' && $vars['view_mode'] == 'teaser') {
     $nid = $node->id();

@@ -6,18 +6,26 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.author.field_email
     - field.field.node.author.field_photo
+    - image.style.200x200sc
     - node.type.author
   module:
+    - image
     - user
 id: node.author.teaser
 targetEntityType: node
 bundle: author
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_photo:
+    type: image
+    weight: 0
     region: content
+    label: hidden
+    settings:
+      image_style: 200x200sc
+      image_link: content
+    third_party_settings: {  }
 hidden:
   field_email: true
-  field_photo: true
   langcode: true
+  links: true
