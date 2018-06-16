@@ -5,10 +5,10 @@ dependencies:
   config:
     - field.field.node.author.field_email
     - field.field.node.author.field_photo
-    - image.style.thumbnail
+    - image.style.large
     - node.type.author
   module:
-    - image
+    - focal_point
     - path
 id: node.author.default
 targetEntityType: node
@@ -26,10 +26,12 @@ content:
   field_photo:
     weight: 2
     settings:
+      preview_image_style: large
+      offsets: '50,50'
       progress_indicator: throbber
-      preview_image_style: thumbnail
+      preview_link: false
     third_party_settings: {  }
-    type: image_image
+    type: image_focal_point
     region: content
   path:
     type: path

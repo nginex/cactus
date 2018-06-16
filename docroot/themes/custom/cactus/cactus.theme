@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Link;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\Template\Attribute;
@@ -69,6 +70,10 @@ function cactus_preprocess_node(&$vars) {
       '#uri' => $file->getFileUri(),
     ];
 
+    $body = render($vars['content']['body']);
+    $vars['body'] = [
+      '#markup' => Markup::create(Html::normalize($body)),
+    ];
     $vars['category_key'] = $node->get('field_category')->value;
     $vars['title'] = $node->getTitle();
     $vars['date'] = date('F d, Y', $node->getCreatedTime());

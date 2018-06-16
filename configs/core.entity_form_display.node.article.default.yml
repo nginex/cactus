@@ -8,10 +8,10 @@ dependencies:
     - field.field.node.article.field_category
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.medium
+    - image.style.large
     - node.type.article
   module:
-    - image
+    - focal_point
     - path
     - text
 _core:
@@ -52,12 +52,14 @@ content:
     type: options_select
     region: content
   field_image:
-    type: image_image
+    type: image_focal_point
     weight: 4
     region: content
     settings:
-      preview_image_style: medium
+      preview_image_style: large
+      offsets: '50,50'
       progress_indicator: throbber
+      preview_link: false
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
