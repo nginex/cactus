@@ -68,6 +68,10 @@ function cactus_preprocess_node(&$vars) {
       '#theme' => 'image_style',
       '#style_name' => $index % 2 ? '368x246sc' : '368x552sc',
       '#uri' => $file->getFileUri(),
+      '#attached' => ['library' => ['cactus/masonry']],
+      '#cache' => [
+        'max-age' => 0,
+      ],
     ];
 
     $body = render($vars['content']['body']);
