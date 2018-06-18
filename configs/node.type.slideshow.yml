@@ -1,0 +1,17 @@
+uuid: 21ce22c5-11d4-4118-ac87-6a69b214157f
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Slideshow
+type: slideshow
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

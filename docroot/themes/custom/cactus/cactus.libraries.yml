@@ -21,3 +21,12 @@ masonry:
   js:
     js/cacrus.masonry.js: { }
     https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js: { type: external, minified: true }
+
+slick:
+  css:
+    theme:
+      https://cdn.jsdelivr.net/gh/kenwheeler/slick/slick/slick.css: { type: external, minified: true }
+      https://cdn.jsdelivr.net/gh/kenwheeler/slick/slick/slick-theme.css: { type: external, minified: true }
+  js:
+    js/cacrus.slick.js: { }
+    https://cdn.jsdelivr.net/gh/kenwheeler/slick/slick/slick.min.js: { type: external, minified: true }

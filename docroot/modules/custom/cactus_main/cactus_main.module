@@ -4,3 +4,12 @@
  * @file
  * Define hooks for cactus_main module.
  */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function cactus_main_page_attachments(array &$attachments) {
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $attachments['#attached']['library'][] = 'cactus/slick';
+  }
+}

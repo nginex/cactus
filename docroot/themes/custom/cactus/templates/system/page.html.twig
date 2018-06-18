@@ -85,9 +85,7 @@
     {% if page.carousel|render|length %}
       {% block carousel %}
         <section class="section-carousel">
-          <div class="{{ container }}">
-            {{ page.carousel }}
-          </div>
+          {{ page.carousel }}
         </section>
       {% endblock %}
     {% endif %}

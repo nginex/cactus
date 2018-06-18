@@ -1,0 +1,8 @@
+uuid: c3d3378f-232c-4bf1-97cb-2e67f1e25307
+langcode: uk
+status: true
+dependencies: {  }
+id: article_teaser_date
+label: 'Article teaser date'
+locked: false
+pattern: 'F d, Y'

@@ -21,8 +21,22 @@ use Drupal\node\Entity\Node;
 function cactus_preprocess_node(&$vars) {
   /** @var \Drupal\node\Entity\Node $node */
   $node = $vars['node'];
+  $node_type = $node->getType();
 
-  if ($node->getType() == 'author' && $vars['view_mode'] == 'teaser') {
+  if ($node_type == 'slideshow' && $vars['view_mode'] == 'teaser') {
+    // Add background image.
+    $image = File::load($node->get('field_image')->target_id);
+
+    $url = file_create_url($image->getFileUri());
+    $vars['attributes']['style'] = "background-image: url({$url});";
+
+    if (!$node->get('field_link')->isEmpty()) {
+      $url = Url::fromUri($node->get('field_link')->uri);
+      $vars['read_more_link'] = Link::fromTextAndUrl(t('Read'), $url)->toRenderable();
+    }
+  }
+
+  if ($node_type == 'author' && $vars['view_mode'] == 'teaser') {
     $vars['read_mode_link'] = Link::createFromRoute(t("Read author's articles"), 'entity.node.canonical', [
       'node' => $node->id(),
     ])->toRenderable();
@@ -48,7 +62,7 @@ function cactus_preprocess_node(&$vars) {
     ];
   }
 
-  if ($node->getType() == 'article' && $vars['view_mode'] == 'teaser') {
+  if ($node_type == 'article' && $vars['view_mode'] == 'teaser') {
     $nid = $node->id();
 
     /** @var \Drupal\views\ViewExecutable $view */

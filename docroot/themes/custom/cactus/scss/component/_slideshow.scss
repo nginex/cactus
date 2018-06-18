@@ -1,0 +1,42 @@
+.view-display-id-slideshow_home {
+  article {
+    position: relative;
+    @extend .align-items-center;
+    justify-content: left;
+    min-height: 60vh;
+    background-size: cover;
+    padding: 3rem;
+    background-position: center;
+    .content {
+      z-index: 10;
+    }
+    .description,
+    .title {
+      color: #fff;
+    }
+    .read-more a {
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+    &:before {
+      content: '';
+      display: block;
+      background: rgba(0,0,0,.2);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      z-index: 0;
+    }
+  }
+  .slick-next {
+    right: 10px;
+    z-index: 10;
+  }
+  .slick-prev {
+    left: 10px;
+    z-index: 10;
+  }
+}

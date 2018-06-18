@@ -1,0 +1,30 @@
+uuid: e5be3a74-f469-4c7d-8f68-718f5480f5f6
+langcode: uk
+status: true
+dependencies:
+  config:
+    - views.view.slideshow
+  module:
+    - system
+    - views
+  theme:
+    - cactus
+id: views_block__slideshow_slideshow_home
+theme: cactus
+region: carousel
+weight: 0
+provider: null
+plugin: 'views_block:slideshow-slideshow_home'
+settings:
+  id: 'views_block:slideshow-slideshow_home'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
